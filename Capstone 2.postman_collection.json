@@ -1,0 +1,310 @@
+{
+	"info": {
+		"_postman_id": "53a37292-bf38-44e8-ba52-15daa43b6eab",
+		"name": "Capstone 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30757863"
+	},
+	"item": [
+		{
+			"name": "userRegistration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"Jimmy\",\r\n    \"lastName\" : \"Neutron\",\r\n    \"mobileNumber\" : \"09201478522\",\r\n    \"email\" : \"jimmy_neutron@mail.com\",\r\n    \"password\" : \"jimmy123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4004/b4/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "userLogin&Auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"jimmy_neutron@mail.com\",\r\n    \"password\" : \"jimmy123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4004/b4/users/login"
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGI2NzJjZDZmYTg5MWNlNGZhMTYxMyIsImVtYWlsIjoiam9obm55X2JyYXZvQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzAwNjQwODQ0fQ.GCPSHpIICrne9Qj6H_fw_KAXrv7OjcEDoZj7cckJllg"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Bombay Sapphire 750ml\",\r\n    \"description\" : \"Brandy with alcohol voulme of 25% air in one of local movies in the Philippines\",\r\n    \"imgUrl\" : \"\",\r\n    \"price\" : 999\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4004/b4/products/createProduct"
+			},
+			"response": []
+		},
+		{
+			"name": "retrieveAllProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTgyN2EwYmU3ZGQwNzNkZjZlNTc4MiIsImVtYWlsIjoiamltbXlfbmV1dHJvbkBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDAyNzYyMzZ9.nhumDulYRPXsOxnNxXC8Im0w225cvUQ--xoSdI6LlUQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4004/b4/products/viewAllProducts"
+			},
+			"response": []
+		},
+		{
+			"name": "searchByName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"name\" : \"gin\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4004/b4/products/searchByName"
+			},
+			"response": []
+		},
+		{
+			"name": "retrieveActiveProducts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTgyN2EwYmU3ZGQwNzNkZjZlNTc4MiIsImVtYWlsIjoiamltbXlfbmV1dHJvbkBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDAyNzYyMzZ9.nhumDulYRPXsOxnNxXC8Im0w225cvUQ--xoSdI6LlUQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4004/b4/products/viewActiveProducts"
+			},
+			"response": []
+		},
+		{
+			"name": "retrieveSingleProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTgyN2EwYmU3ZGQwNzNkZjZlNTc4MiIsImVtYWlsIjoiamltbXlfbmV1dHJvbkBtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDAyNzYyMzZ9.nhumDulYRPXsOxnNxXC8Im0w225cvUQ--xoSdI6LlUQ"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4004/b4/products/654c358187bc44c185f30743/viewProduct"
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGI2NzJjZDZmYTg5MWNlNGZhMTYxMyIsImVtYWlsIjoiam9obm55X2JyYXZvQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzAwNTUzODU1fQ.R16FZFXtsYqPgeLkUV7DlUYtgafQL4_bhSB5t_cDWFw"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Emperador Light 1L\",\r\n    \"description\" : \"Brandy with alcohol voulme of 27.5% locally made in the Philippines\",\r\n    \"price\" : 160\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4004/b4/products/654c57f43ce42d4d4acc221d/update"
+			},
+			"response": []
+		},
+		{
+			"name": "archiveProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGI2NzJjZDZmYTg5MWNlNGZhMTYxMyIsImVtYWlsIjoiam9obm55X2JyYXZvQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjk5NTAxNzAyfQ.12FlMmIeM6ql7QTC87svgnbpeJSas2b81LTtTbCctx4"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4004/b4/products/654c6bd7a60a831ced536221/archive"
+			},
+			"response": []
+		},
+		{
+			"name": "activateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGI2NzJjZDZmYTg5MWNlNGZhMTYxMyIsImVtYWlsIjoiam9obm55X2JyYXZvQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjk5NTAxNzAyfQ.12FlMmIeM6ql7QTC87svgnbpeJSas2b81LTtTbCctx4"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4004/b4/products/654c6bd7a60a831ced536221/activate"
+			},
+			"response": []
+		},
+		{
+			"name": "checkout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGI3MjAwZjRkNzNkMjA2OWMyYjRlNiIsImVtYWlsIjoiZG9lX2pvaG5AbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjk5NTg0NjAwfQ.55nQOAyPeGfmWFoMa1C_yuE2x0UM-cqaiQSJPgDvVjk"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\" : \"655d5454e47e3c9bf3d98dd2\",\r\n    \"productName\" : \"Alfonso Lights 1L\",\r\n    \"quantity\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4004/b4/users/checkout"
+			},
+			"response": []
+		},
+		{
+			"name": "retrieveUserDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGI3MjAwZjRkNzNkMjA2OWMyYjRlNiIsImVtYWlsIjoiZG9lX2pvaG5AbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjk5NTEwNDY0fQ.tCiOgNdg3u-6rjbOqJvai5dj2RVm5NzrXynoqoPng-E"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4004/b4/users/654b7200f4d73d2069c2b4e6/details"
+			},
+			"response": []
+		},
+		{
+			"name": "setUserAsAdmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGI2NzJjZDZmYTg5MWNlNGZhMTYxMyIsImVtYWlsIjoiam9obm55X2JyYXZvQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjk5NTc1MzQ1fQ.rTuhSbKhuUi3wEHCzg71B2gX_blw9VOQ2fSkAU8bv2I"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : \"654d728070d6e5bb0fb7ddd9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:4004/b4/users/setAsAdmin"
+			},
+			"response": []
+		},
+		{
+			"name": "retrieveAllOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGI2NzJjZDZmYTg5MWNlNGZhMTYxMyIsImVtYWlsIjoiam9obm55X2JyYXZvQG1haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNjk5NTkyOTY0fQ.9fHJO-dk8OCU1hEo-lQmIkS0Q8cNmWtDm-kpi3gexyE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4004/b4/users/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "retrieveMyOrder",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGI3MjAwZjRkNzNkMjA2OWMyYjRlNiIsImVtYWlsIjoiZG9lX2pvaG5AbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjk5NTg0NjAwfQ.55nQOAyPeGfmWFoMa1C_yuE2x0UM-cqaiQSJPgDvVjk"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:4004/b4/users/myOrders"
+			},
+			"response": []
+		}
+	]
+}
